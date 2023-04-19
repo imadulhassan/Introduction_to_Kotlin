@@ -1,11 +1,14 @@
+package OOP
 
-class Car {
-    var carname :String=""
+// This class is  implemented to disucss the concetp of Setter and init method  in Class
+class Car( val mynam:String) {
+    var carname :String=mynam
     var model :Int=0
     var seats :Int=0
-    var cc :String=""
 
-    constructor(){
+    var cc :String=""
+    var mylength=0
+    constructor() : this("s") {
         print("primary Constructor")
     }
 
@@ -20,6 +23,7 @@ class Car {
 
     fun  setCarName(name:String){
          this.carname= name
+       mynam
     }
     fun  setCarModel(model:Int){
         this.model= model
