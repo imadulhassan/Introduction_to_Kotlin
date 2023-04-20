@@ -1,3 +1,4 @@
+import OOP.getInternalMethod
 
 fun runningSum(nums:IntArray):IntArray{
     var resultArray=IntArray(nums.size)
@@ -37,7 +38,7 @@ fun main(){
     ara[0]=5
     ara[1]=5
     ara[2]=4
-
+     getInternalMethod()
 
 //    runningSum(ara).forEach {
 //         print( "$it ")
