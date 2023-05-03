@@ -22,4 +22,6 @@ fun main(){
      }else{
          println("Index of $value is $result")
      }
+
+
 }

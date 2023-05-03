@@ -5,7 +5,7 @@ open class Phone(var name: String, var  type:String){
         println("Secoundry Constructor ")
     }
 
-    fun makeACall(){
+   open fun makeACall(){
          println("Make a Call ")
     }
     fun sendSms(){

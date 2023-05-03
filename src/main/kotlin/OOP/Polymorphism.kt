@@ -1,34 +1,64 @@
 package OOP
 fun main(){
+//    val array = arrayOf<Shape>(Circle(20.0),Rectangle(20.0,30.0),Suqare(20.0))
+//    calculateArea(array)
+//
 
-
-     val obj:Shape = Circle(20.0)
-     val rect:Shape = Rectangle(20.0,30.0)
-     val sqr:Shape = Suqare(20.0)
-
-     val array = arrayOf<Shape>(Circle(20.0),Rectangle(20.0,30.0),Suqare(20.0))
-
-     calculateArea(array)
-
+    var obj = Shape()
+    obj.displayMessage()
 
 
 }
+
 
 fun calculateArea( list:Array<Shape>){
-     for (obj in list){
-            println(obj.area())
+    for (obj in list){
+        println(obj.area())
+    }
+}
+
+interface  Draggable {
+    fun dragable()
+    fun displayMessage(){
+         println("Dragable Message")
+    }
+}
+
+interface  Hold {
+     fun  hold()
+
+     fun displayMessage(){
+         println("Holding Messahe")
      }
 }
 
 
-open class Shape {
-     open fun area():Double{
-         return  0.0
-     }
+open class Shape :Draggable,Hold{
+
+
+    override fun dragable() {
+       println("Draagable")
+
+    }
+
+    override fun displayMessage() {
+         super<Hold>.displayMessage()
+
+
+    }
+
+    open fun area():Double{
+        return  0.0
+    }
+
+    override fun hold() {
+       println("Holding the shape")
+    }
 }
 
 class Circle(val radius: Double ): Shape() {
     override fun area(): Double {
+
         return    2 * 3.14  * radius
     }
 
